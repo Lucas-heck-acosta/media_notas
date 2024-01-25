@@ -6,16 +6,25 @@ public class MediaNotas {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Double soma =  0.0;
+        double soma =  0.0;
 
         for (int i = 0; i < NUM_NOTAS; i++)
         {
             System.out.print("Digite a nota número " + (i + 1) + ": ");
-            Double nota = scanner.nextDouble();
+            double nota = scanner.nextDouble();
             soma += nota;
         }
         System.out.println();
-        System.out.println("A média final foi: " + (soma / NUM_NOTAS));
+        double media = soma / NUM_NOTAS;
+        System.out.println("A média final foi: " + media);
+        if (media >= 7)
+        {
+            System.out.println("Aprovado!");
+        } else if (media >= 5) {
+            System.out.println("Recuperação!");
+        } else {
+            System.out.println("Reprovado!");
+        }
         System.out.println();
 
         scanner.close();
