@@ -6,12 +6,12 @@ public class MediaNotas {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double soma = 0;
+        Double soma =  0.0;
 
         for (int i = 0; i < NUM_NOTAS; i++)
         {
             System.out.print("Digite a nota número " + (i + 1) + ": ");
-            double nota = scanner.nextDouble();
+            Double nota = scanner.nextDouble();
             soma += nota;
         }
         System.out.println();
